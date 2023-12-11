@@ -20,12 +20,11 @@ public class TestMain {
 		test.t3(human);//i/인자갑		
 		System.out.println(human.age);
 		
-		int [] ar = new int[3];
-		
+		int [] ar = new int[3];		
 		ar[0]=3;
 		ar[1]=2;
 		ar[2]=6;
-		test.t4(ar);
+		ar = test.t4(ar);
 		
 	}
 	
