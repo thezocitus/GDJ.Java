@@ -11,8 +11,8 @@ public class SchoolService {
 	//해당학생을 리턴 없으면 null
 	public Student[] addstudent(Student[] students) {
 		Scanner sc = new Scanner(System.in);
-//		int num = students.length+1;
-		Student [] temp = new Student[students.length+1];		
+		int num = students.length+1;
+		Student [] temp = new Student[num];		
 		for(int i = 0 ; i<num;i++) {
 			
 			if(i<students.length){				
