@@ -21,6 +21,12 @@ public class Test {
 		human.age = 500; 
 	}
 	
+	public void t4(int [] ar) {
+		for(int i = 0 ; i < ar.length ; i++ ) {
+			System.out.println(ar[i]);
+		}
+	}
+	
 }
 
 
