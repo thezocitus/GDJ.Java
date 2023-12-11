@@ -7,11 +7,11 @@ public class SchoolController {
 	public void start() {
 		Scanner sc = new Scanner(System.in);
 		
-		SchoolService ss =null;
-		SchoolView sv = null;	
+		SchoolService schoolService =null;
+		SchoolView schoolView = null;	
 		Student [] students = null;
-		ss = new SchoolService();
-		sv = new SchoolView();
+		schoolService = new SchoolService();
+		schoolView = new SchoolView();
 		boolean check = true;
 		
 		while(check) {
@@ -24,18 +24,23 @@ public class SchoolController {
 			
 			switch (select) {
 			case 1:				
-				students=ss.makeStudents();
+				students=schoolService.makeStudents();
 				break;
 			case 2:
-				sv.view(students);
+				schoolView.view(students);
 				break;
 
 			case 3:
-				
+				Student s =	schoolService.findByNum(students);
+				if(s != null) {
+					schoolView.view(students);
+				}else {
+					System.out.println("학생이 없다");
+				}
 				break;
 
 			case 4:
-				
+				students=schoolService.addstudent(students);
 				break;
 				
 			default:
