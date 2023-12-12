@@ -1,25 +1,30 @@
 package com.winter.study3.rpg;
 
-public class Magiction {
+public class Magiction extends Character {
 
-	String name;
-	int hp;
-	int mp;
-	int level;
-	int INT;
-	int STR;
-	int AGL;
-	String skill;
+	
+	private int mp;
+	
 
-	public void info() {
-		String localName="abc";
-//		String name = "abc";
-		System.out.println("Name :"+name);
-		System.out.println("hp :"+this.hp);
-		System.out.println(this);
-		this.t1();
-//		t1();
+		public void info() {		
+			
+			super.superInfo(name, mp);
+			System.out.println(this.mp);
+	
+
 	}
+
+
+
+	public int getMp() {
+		return mp;
+	}
+
+	public void setMp(int mp) {
+		this.mp = mp;
+	}
+
+	
 	
 	public void t1() {
 		System.out.println("test메서드 입니다."); 
