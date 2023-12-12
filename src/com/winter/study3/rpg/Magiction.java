@@ -8,13 +8,16 @@ public class Magiction extends Character {
 
 		public void info() {		
 			
-			super.superInfo(name, mp);
+			super.superInfo("mbub", 50);
+			System.out.println(this.getName());
 			System.out.println(this.mp);
 	
 
 	}
 
-
+	public void attack(){
+		
+	}
 
 	public int getMp() {
 		return mp;
