@@ -6,4 +6,8 @@ public class Worrier extends Character {
 		super();
 	}
 	
+	public void attack() {
+		
+	}
+	
 }

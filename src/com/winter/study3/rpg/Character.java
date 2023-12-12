@@ -1,16 +1,21 @@
 package com.winter.study3.rpg;
 
-public class Character {
+public abstract class  Character {
 
 	private String name;
 	private int hp;
 	
 	
-	public void attack() {
-		System.out.println("마법공격");
+	public abstract void attack();
+	
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
 	}
-	
-	
+
+
 	public void superInfo(String name, int hp) {
 		
 		System.out.println("Name :"+this.getName());
