@@ -10,7 +10,9 @@ public class StarMain {
 		
 		Marine marine = new Marine();// <=메서드명 (생성자 메서드)
 		
-		marine.hp = 50;
+		System.out.println(marine.gun.damege);
+		
+//		marine.hp = 50;
 		marine.move();
 
 		Marine marine2 = new Marine();
