@@ -4,6 +4,9 @@ public abstract class  Character {
 
 	private String name;
 	private int hp;
+	private Axe axe;
+	
+
 	
 	
 	public abstract void attack();
