@@ -31,22 +31,25 @@ public class CardView {
 		
 		public void detailCard(CardData[] cardDatas) {
 			
-			System.out.println("번호를 입력하시오");
-			int num=sc.nextInt();
+			if(cardDatas==null || cardDatas.length==0) {
+				System.out.println("카드가없습니다.");			
+				
+			}else {
+				System.out.println("번호를 입력하시오");
+				int num=sc.nextInt();
 				num=num-1;
-			
-			System.out.println(
-					"번호 : "+  cardDatas[num].num+
-					"	회사명 : "+ cardDatas[num].company+
-					"	이름 : "+ cardDatas[num].name+
-					"	직책 : "+ cardDatas[num].position+
-					"	전화번호 : "+ cardDatas[num].phone+
-					"	이메일 : "+ cardDatas[num].email+
-					"	주소 : "+cardDatas[num].address					
-					);					
-			
-			
-			
+				
+				System.out.println(
+						"번호 : "+  cardDatas[num].num+
+						"	회사명 : "+ cardDatas[num].company+
+						"	이름 : "+ cardDatas[num].name+
+						"	직책 : "+ cardDatas[num].position+
+						"	전화번호 : "+ cardDatas[num].phone+
+						"	이메일 : "+ cardDatas[num].email+
+						"	주소 : "+cardDatas[num].address					
+						);					
+				
+			}		
 			
 		}
 

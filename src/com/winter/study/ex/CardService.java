@@ -6,10 +6,10 @@ public class CardService extends CardMain{
 
 	Scanner sc = new Scanner(System.in);	
 	
-	public CardData inpuCard(int cardnum){
+	public CardData inpuCard(){
 		CardData card =new CardData();
 		System.out.println("번호를 입력하세요");
-		card.num=sc.nextInt();;
+		card.num=sc.nextInt();
 //		System.out.println("회사명을 입력하세요");
 //		card.company = sc.next();
 //		System.out.println("이름을 입력하세요");
@@ -29,12 +29,13 @@ public class CardService extends CardMain{
 	
 	public CardData[] addCard(CardData[] cardDatas) {
 		
-		CardData [] newdatas= new CardData[0];
-		if(cardDatas ==null || cardDatas.length == 0 ) {
+		CardData [] newdatas= null;
+		if(cardDatas ==null || cardDatas.length <= 0 ) {
 			cardDatas=new CardData[1];
 			newdatas= new CardData[cardDatas.length];
 		}else {
-			newdatas= new CardData[cardDatas.length+1];		
+			newdatas = new CardData [cardDatas.length+1];		
+			System.out.println(newdatas.length);
 		}
 //		System.out.println(newdatas.length);
 //		System.out.println(newdatas.length);
@@ -42,8 +43,12 @@ public class CardService extends CardMain{
 			newdatas[i]=cardDatas[i];
 		}
 		
+		System.out.println(newdatas.length);
 		
-		newdatas[newdatas.length-1]=inpuCard(newdatas.length);
+		newdatas[newdatas.length-1]=inpuCard();
+		
+		System.out.println(newdatas.length);
+		
 		
 		return newdatas;		
 		
@@ -99,7 +104,7 @@ public class CardService extends CardMain{
 			cardDatas[select].address=sc.next();
 			return cardDatas;
 		case 8 :		
-			cardDatas[select]=inpuCard(cardDatas[select].num);
+			cardDatas[select]=inpuCard();
 			return cardDatas;
 		case 9 :
 			break;
@@ -127,7 +132,10 @@ public class CardService extends CardMain{
 		
 		System.out.println("제거할 카드번호를 입력하시오 + " + "	0 : 취소");
 		int select = sc.nextInt();
-		if(select==0) {
+		if(select==0 || select>=cardDatas.length) {
+			if(select>=cardDatas.length) {
+				System.out.println("다시입력하셈");
+			}
 			return cardDatas;
 		}
 		select= select-1;
