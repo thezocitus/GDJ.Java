@@ -1,5 +1,7 @@
 package com.winter.study3.rpg;
 
+import com.winter.study3.rpg.weapon.Axe;
+
 public abstract class  Character {
 
 	private String name;
