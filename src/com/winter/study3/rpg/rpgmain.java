@@ -1,32 +1,24 @@
 package com.winter.study3.rpg;
 
+import com.winter.study3.rpg.weapon.Axe;
+
 public class RpgMain {
 
-	public static void main(String[] arges) {
-	
-		Magiction magiction = new Magiction();
-		magiction.level = 99;
-		magiction.INT = 255;
-		magiction.STR = 255;
-		magiction.AGL = 255;
+	public static void main(String[] arges) {		
 		
 		
-			
-		Magiction magiction2 = new Magiction();
-		magiction.info();
-		System.out.println(magiction2);
-		magiction2.name="iu";
-		magiction2.info();
-		System.out.println(magiction);
+		
+		Magiction m = new Magiction();
+		Archer archer = new Archer();
+		Character c = m;
+		
+		Axe aex = new Axe();
+		
+		
+		
+		
 	}
 
-	
-//	String id;
-//	int level;
-//	int INT;
-//	int STR;
-//	int AGL;
-//	String skill;
 	
 	
 }
