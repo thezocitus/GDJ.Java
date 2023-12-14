@@ -24,7 +24,7 @@ public class Ex2Controller {
 			switch (select) {
 			case 1:
 				System.out.println("성별");
-				ex2Service.sexual(minbun);
+				ex2Service.gender(minbun);
 				break;
 			case 2:
 				System.out.println("나이");
