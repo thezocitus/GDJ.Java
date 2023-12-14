@@ -9,6 +9,7 @@ public class Ex2Service {
 		
 		minbun = minbun.replace("-","");	 
 				
+		
 		return minbun;
 		
 	}
@@ -16,7 +17,7 @@ public class Ex2Service {
 	
 	
 	
-	public void sexual(String minbun) {
+	public void gender(String minbun) {
 		
 		 char ch = minbun.charAt(6);
 		 
@@ -53,6 +54,7 @@ public class Ex2Service {
 		System.out.println(age+"살 입니다.");		
 	}
 	
+	
 	public void sesson(String minbun) {
 		
 		String month = minbun.substring(2,4);
@@ -69,18 +71,20 @@ public class Ex2Service {
 			System.out.println("가을생");
 		}
 	}
+	
+	
 	public void checknum(String minbun) {
 		char[] ch = minbun.toCharArray();
-		String cnum ="234567892345";//12자리
-		int [] temp = new int[cnum.length()];		
+		int [] cnum= {2,3,4,5,6,7,8,9,2,3,4,5};//12자리
+		int [] temp = new int[cnum.length];		
 		int j = 0;
 		int sum = 0;
-		int check=Integer.parseInt(String.valueOf(ch[cnum.length()-1]));
+		int check=Integer.parseInt(String.valueOf(ch[cnum.length-1]));
 		for(int i = 0 ; i < ch.length ; i++) {
 			
-			if(i!=cnum.length()) {
+			if(i!=cnum.length) {
 				temp[j] = Integer.parseInt(String.valueOf(ch[i]));
-				int n = Integer.parseInt(String.valueOf(cnum.charAt(j)));
+				int n = cnum[j];
 				int tempsum = temp[j]*n;
 				sum = tempsum + sum;
 				j++;				
@@ -95,12 +99,7 @@ public class Ex2Service {
 		
 			namugi= namugi/10;			
 		
-		}	
-		
+		}		
 		System.out.println(namugi==check);
-	}
-			
-			
-			
-	
+	}	
 }
