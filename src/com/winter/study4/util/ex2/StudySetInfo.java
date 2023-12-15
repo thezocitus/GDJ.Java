@@ -1,5 +1,6 @@
 package com.winter.study4.util.ex2;
 
+import java.awt.Container;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,37 +18,30 @@ public class StudySetInfo {
 		//배열
 		int[] arlotto = new int[6];
 		
-		int num = random.nextInt();
 		
-		arlotto[0] = num;			
-		for (int i = 1 ; i < arlotto.length ; i++ ) {
-			num = random.nextInt();
-			arlotto[i] = num;	
-			for(int j=0 ; j < arlotto.length ; j ++) {
-				
-				if(arlotto[i]==arlotto[j]) {
-					i--;
-				}
+			
+		for (int i = 0 ; i < arlotto.length ; i++ ) {
+			int num = random.nextInt(45)+1;
+			
+					
 				
 			}
-				System.out.println(arlotto[i]);		
+				System.out.println(); 	
 		}
 		
 		
 		
-	}
+	
 	
 	
 	public void ex1() {
 		//ArrayList
 		ArrayList<Integer> arlotto = new ArrayList<>();
 		
-		int count=0;	
-		int num=0;
-		
+		int count=0;		
 		
 		while (arlotto.size()!=6) {
-			num = random.nextInt(45);			
+			int num = random.nextInt(45)+1;			
 			for(int i = 0; i<arlotto.size();i++) {				
 				if(num==arlotto.get(i)) {
 					arlotto.remove(i);
@@ -68,6 +62,22 @@ public class StudySetInfo {
 	}
 	
 	
+	public void ex1sam() {
+	
+		ArrayList<Integer> ar = new ArrayList<>();
+		
+		while(ar.size()==6) {
+			int num = random.nextInt(45)+1;	
+			if(!ar.contains(num)) {
+				ar.add(num);
+			}
+		}
+		for(int i = 0 ; i<ar.size();i++) {
+			int j = i +1;
+			System.out.println(ar.get(i)+ "  ar "+j);
+		}
+		
+	}
 	
 	
 	public void ex2() {
@@ -77,10 +87,12 @@ public class StudySetInfo {
 		boolean check = true;
 		
 		while(hslotto.size()!=6) {
-			int num = random.nextInt(45);
+			int num = random.nextInt(45)+1;
 			hslotto.add(num);			
 			
 		}
+		
+		System.out.println(hslotto);
 		
 		int i = 1;
 		Iterator<Integer> it = hslotto.iterator();
