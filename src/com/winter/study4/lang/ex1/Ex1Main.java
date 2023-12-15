@@ -1,5 +1,7 @@
 package com.winter.study4.lang.ex1;
 
+import java.util.Arrays;
+
 public class Ex1Main {
 
 	public static void main(String[] args) {
@@ -7,13 +9,16 @@ public class Ex1Main {
 		
 		
 		WeatherService weatherService = new WeatherService();
+		WeatherData[] weatherDatas = null;
+		String newdata = weatherService.init();
 		
-		String newdatas = weatherService.init();
+		String[] newDatas=weatherService.splitt(newdata);
 		
-		String[] newDatas=weatherService.splitt(newdatas);
+		weatherDatas = weatherService.com(newDatas);
 		
 		
-		System.out.println(newDatas);
+		
+		
 		
 	}
 
