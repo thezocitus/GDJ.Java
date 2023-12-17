@@ -1,6 +1,7 @@
 package com.winter.study4.util.ex2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
@@ -15,15 +16,13 @@ public class StudySetInfo {
 
 	public void ex0() {
 		//배열
-		int[] arlotto = new int[6];
+		int[] arlotto = new int[6];		
 		
-		int num = random.nextInt();
-		
-		arlotto[0] = num;			
-		for (int i = 1 ; i < arlotto.length ; i++ ) {
-			num = random.nextInt();
+					
+		for (int i = 0 ; i < arlotto.length ; i++ ) {
+			int num = random.nextInt(6)+1;
 			arlotto[i] = num;	
-			for(int j=0 ; j < arlotto.length ; j ++) {
+			for(int j=0 ; j < i ; j ++) {
 				
 				if(arlotto[i]==arlotto[j]) {
 					i--;
@@ -33,7 +32,7 @@ public class StudySetInfo {
 				System.out.println(arlotto[i]);		
 		}
 		
-		
+		System.out.println(Arrays.toString(arlotto));
 		
 	}
 	

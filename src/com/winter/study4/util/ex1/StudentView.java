@@ -39,8 +39,10 @@ public class StudentView {
 		
 		for(StudentDTO studentDTO:ar) {
 			
-			System.out.println("이름 : "+studentDTO.getName());
-			System.out.println("번호 : "+studentDTO.getNum());
+			System.out.println("이름 : "+studentDTO.getName()+"	번호 : "+studentDTO.getNum()+
+								"	국어점수 : "+studentDTO.getKuk()+"		영어점수 : "+studentDTO.getEng()+
+								"	수학점수 : "+studentDTO.getMath()+"	총점 : "+studentDTO.getMath()+
+								"	평균 : "+studentDTO.getAvg());			
 			
 		}
 		
