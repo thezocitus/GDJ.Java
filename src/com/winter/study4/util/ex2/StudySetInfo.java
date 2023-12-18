@@ -1,7 +1,8 @@
 package com.winter.study4.util.ex2;
 
-import java.awt.Container;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
@@ -16,22 +17,26 @@ public class StudySetInfo {
 
 	public void ex0() {
 		//배열
-		int[] arlotto = new int[6];
+		int[] arlotto = new int[6];		
 		
 		
 			
 		for (int i = 0 ; i < arlotto.length ; i++ ) {
 			int num = random.nextInt(45)+1;
-			
+			arlotto[i]=num;
+			 for(int j=0 ; j<i ;j++) {				 
+				if(arlotto[i]==arlotto[j]) {
+					i--;
+					break;
+				}
+			 }
 					
 				
 			}
-				System.out.println(); 	
+		System.out.println(Arrays.toString(arlotto)+"for");
+				
 		}
 		
-		
-		
-	
 	
 	
 	public void ex1() {
