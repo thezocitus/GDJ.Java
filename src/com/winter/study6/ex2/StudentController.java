@@ -9,6 +9,7 @@ import com.winter.study4.util.ex1.StudentView;
 public class StudentController {
 	
 	
+	
 	public void start() {
 		StudentDAO studentDAO = new StudentDAO();
 		StudentView view = new StudentView();

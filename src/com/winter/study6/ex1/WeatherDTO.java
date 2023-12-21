@@ -2,30 +2,22 @@ package com.winter.study6.ex1;
 
 public class WeatherDTO {
 	
-	private String name;
-	private int temp;
+	private String city;
+	private int gion;
+	private String info;
 	private int hum;
-	private String info ;
 	
-	
-	
-	public String getName() {
-		return name;
+	public String getCity() {
+		return city;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCity(String city) {
+		this.city = city;
 	}
-	public int getTemp() {
-		return temp;
+	public int getGion() {
+		return gion;
 	}
-	public void setTemp(int temp) {
-		this.temp = temp;
-	}
-	public int getHum() {
-		return hum;
-	}
-	public void setHum(int hum) {
-		this.hum = hum;
+	public void setGion(int gion) {
+		this.gion = gion;
 	}
 	public String getInfo() {
 		return info;
@@ -33,5 +25,14 @@ public class WeatherDTO {
 	public void setInfo(String info) {
 		this.info = info;
 	}
+	public int getHum() {
+		return hum;
+	}
+	public void setHum(int hum) {
+		this.hum = hum;
+	}
+	
+	
+	
 	
 }

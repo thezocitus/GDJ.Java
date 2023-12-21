@@ -8,7 +8,12 @@ public class WeatherMain {
 	public static void main(String[] args) {
 		
 		WeatherController weatherController= new WeatherController();
-		weatherController.start();
+		try {
+			weatherController.start();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
